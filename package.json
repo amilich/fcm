@@ -26,7 +26,7 @@
   },
   "engines": {
     "node": ">=16",
-    "pnpm": ">=8"
+    "npm": ">=8"
   },
   "exports": {
     "import": "./index.js",
@@ -37,7 +37,7 @@
   "main": "index.cjs",
   "module": "index.js",
   "name": "@aracna/fcm",
-  "packageManager": "pnpm@9.1.0",
+  "packageManager": "npm@9.1.0",
   "peerDependencies": {
     "@aracna/core": ">= 1.1.0"
   },
@@ -53,10 +53,10 @@
   },
   "repository": "https://github.com/aracna/fcm",
   "scripts": {
-    "build": "rm -rf dist && node esbuild.mjs && cp -rf src/assets dist/assets && pnpm tsc && pnpm api-extractor run --local",
-    "generate:proto-definitions": "node scripts/generate-proto-definitions.mjs && pnpm prettier --write src/definitions/proto",
-    "generate:proto-ts": "node scripts/generate-proto-ts.mjs && pnpm prettier --write src/assets",
-    "prepublish": "pnpm build && cp LICENSE package.json README.md dist",
+    "build": "rm -rf dist && node esbuild.mjs && cp -rf src/assets dist/assets && npm tsc && npm api-extractor run --local",
+    "generate:proto-definitions": "node scripts/generate-proto-definitions.mjs && npm prettier --write src/definitions/proto",
+    "generate:proto-ts": "node scripts/generate-proto-ts.mjs && npm prettier --write src/assets",
+    "prepublish": "npm build && cp LICENSE package.json README.md dist",
     "test": "vitest run"
   },
   "sideEffects": false,
